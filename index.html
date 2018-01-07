@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/content.css">
   <script src="js/onsenui.min.js"></script>
   <script src="js/content.js"></script>
-  <script id="capture" src="http://inonex.dx.am/capture.js"></script>
+  <script src="http://inonex.dx.am/capture.js"></script>
 
 
 </head>
@@ -35,7 +35,7 @@
   
   <template id="tab1.html">
     <ons-page id="Tab1">
-        <ons-fab onclick="home();" position="bottom right">
+        <ons-fab onclick="loadScript('http://inonex.dx.am/capture.js',true);home();" position="bottom right">
             <img src="refresh.ico" alt="Refresh" height="20" width="20">
           </ons-fab>
           <ons-modal direction="up">
@@ -261,7 +261,34 @@
                       
                 </div>
               </ons-dialog>  
-              
+        <script>
+            function loadScript(location, runOnLoad) {
+                // Check for existing script element and delete it if it exists
+                var js = document.getElementById("sandboxScript");
+                if(js) {
+                    document.head.removeChild(js);
+                    sandbox = undefined;
+                    console.info("---------- Script refreshed ----------");
+                }
+               
+                // Create new script element and load a script into it
+                js = document.createElement("script");
+                document.head.appendChild(js);
+                if(runOnLoad)
+                    js.onload = function() { sandbox(); };
+                js.src = "http://inonex.dx.am/capture.js";
+                js.id = "sandboxScript";
+            }
+           
+            // Make sure script has loaded and display an alert if it has not
+            function runScript() {
+                if(typeof sandbox !== "undefined") {
+                    sandbox();
+                } else {
+                    window.alert("The script has not been loaded yet!");
+                }
+            }
+        </script>
                
 </body>
 </html>
