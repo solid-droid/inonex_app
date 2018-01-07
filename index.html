@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/onsenui.css">
+  <link rel="stylesheet" href="css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/content.css">
+  <script src="js/onsenui.min.js"></script>
+  <script src="js/content.js"></script>
+  <script src="http://inonex.dx.am/capture.js"></script>
+
+
+</head>
+
+  <ons-page>
+    <ons-toolbar>
+      <div class="left"><ons-toolbar-button onclick="showDialog('dialog-1')">
+          <img class="one" src="Untitled.png" alt="Reboot" width="160" height=100%>
+      </ons-toolbar-button>
+          Ver 1.1.18
+      </div>
+      
+       
+      </ons-toolbar>
+    </ons-toolbar>
+  
+    <ons-tabbar swipeable position="auto">
+      <ons-tab page="tab1.html" label="Home" >
+      </ons-tab>
+      <ons-tab page="tab2.html" label="Ideate" >
+      </ons-tab>
+      <ons-tab page="tab3.html" label="About" >
+      </ons-tab>
+    </ons-tabbar>
+  </ons-page>
+  
+  <template id="tab1.html">
+    <ons-page id="Tab1">
+        <ons-fab onclick="home();" position="bottom right">
+            <img src="refresh.ico" alt="Refresh" height="20" width="20">
+          </ons-fab>
+          <ons-modal direction="up">
+              <div style="text-align: center">
+                <p>
+                  <img src="loading.gif" alt="Refresh" height=100 width=100>
+                </p>
+              </div>
+            </ons-modal>
+      <p style="text-align: center;">
+          <ons-list>
+              <ons-list-item id="item1"></ons-list-item>
+              <ons-list-item id="item2"></ons-list-item>
+              <ons-list-item id="item3"></ons-list-item>
+              <ons-list-item id="item4"></ons-list-item>
+              <ons-list-item id="item5"></ons-list-item>
+              <ons-list-item id="item6"></ons-list-item>
+              <ons-list-item id="item7"></ons-list-item>
+              <ons-list-item id="item8"></ons-list-item>
+              <ons-list-item id="item9"></ons-list-item>
+              <ons-list-item id="item10"></ons-list-item>
+              <ons-list-item id="item11"></ons-list-item>
+
+            </ons-list>
+       </p>
+    </ons-page>
+  </template>
+  
+  <template id="tab2.html">
+    <ons-page id="Tab2">
+      <p style="text-align: center;">
+        
+        <ons-list>
+        <ons-list-header>Jan 2018</ons-list-header>
+        <ons-list-item id="p1" tappable onclick="check(this.id);">Dynamic Display</ons-list-item>
+        <ons-list-item id="p2" tappable onclick="check(this.id);">Path Finder</ons-list-item>
+        <ons-list-item id="p3" tappable onclick="check(this.id);">Open Fitness</ons-list-item>
+        <ons-list-item id="p4" tappable onclick="check(this.id);">Eco Printer</ons-list-item>  
+        <ons-list-item id="p5" tappable onclick="check(this.id);">Home View</ons-list-item>
+        <ons-list-item id="p6" tappable onclick="check(this.id);">BotNet</ons-list-item>
+      </ons-list>
+    </p>
+    </ons-page>
+  </template>
+
+  <template id="tab3.html">
+    <ons-page id="Tab3">
+      <p style="text-align: center;" id="app_des">
+        <i>The official app notifies <br> project updates, club events & activities.</i>  
+        <br><br>
+        <a href="https://goo.gl/forms/zzwYdcicDm1Xv7Ro2"></a><ons-button>Join</ons-button>
+      </p>
+      <p id="contact">
+        <br> Contact
+        <br> Website           : <a href="http://inonex.dx.am">http://inonex.dx.am</a>
+        <br> Email             : inonex.reboot@gmail.com
+        <br> Staff in charge   : Irshad Ali 
+        <br> Student in charge : Nikhil M Jeby
+        <br> phone             : +91 8156915169 
+      </p>
+      <p style="text-align: center;">
+        ----------------
+      </p>
+    </ons-page>
+  </template>
+</ons-page>
+<ons-dialog id="dialog-1" cancelable>
+    <div style="text-align: center; padding: 10px;">
+             <p>
+                Reboot is a general club 
+                designed to evolve the 
+                technical caliber of 
+                every member.The platform
+                focuses on the development and innovation
+                relevent in the society.
+                The fundamental platform for
+                <br>novel innovations in <br>
+                Model engineering college.  
+            </p>
+          <p>
+            <ons-button onclick="hideDialog('dialog-1')">Close</ons-button> <ons-button onclick="update()">Update</ons-button>
+          </p>
+    </div>
+  </ons-dialog>
+  <ons-dialog id="content1" cancelable>
+      <div style="text-align: center; padding: 1px;">
+          <p id="des1" style="font-size:15px" >
+             <H4>Dynamic Display</H4> 
+             <p>
+                 Dynamic Shape Display that can render 3D content physically,
+                 so users can interact with digital information in a tangible way. 
+                 Remote participants in a video conference can be displayed physically,
+                 allowing for a strong sense of presence and the ability to interact physically at a distance.
+             </p>
+             <p><i>Related works :</i><br>
+               <ons-button style="text-transform: none;" onclick="load('inFORM');" modifier="quiet">inFORM</ons-button> 
+                <ons-button style="text-transform: none;" onclick="load('coca');" modifier="quiet">Coco-cola ad</ons-button>
+            </p>
+            <p><i>Resources and Requrements :</i><br><br>
+              <ons-button style="text-transform: none;" onclick="load('DD_view1')" >View</ons-button> 
+            </p>
+           <p><i>Documentation :</i><br><br>
+            <ons-button style="text-transform: none;" onclick="load('DD_doc1');" >View</ons-button>
+          </p>
+          </p>
+            
+      </div>
+      </ons-dialog>
+    <ons-dialog id="content2" cancelable>
+        <div style="text-align: center; padding: 1px;">
+            <p id="des2" style="font-size:15px" >
+                <H4>Path Finder</H4> 
+                <p>
+                    A live bus tracking system <br>(Primarily for KSRTC) <br>providing Location & Traffic Prediction. 
+                    The system uses active RFID beacons on bus and stationary reciving access points.
+
+                </p>
+                <p><i>Related works :</i><br>
+                  <ons-button style="text-transform: none;" onclick="load('ksrtc');" modifier="quiet">KSRTC live demo</ons-button> 
+                   <ons-button style="text-transform: none;" onclick="load('mitra');" modifier="quiet">Mitra</ons-button>
+               </p>
+               <p><i>Resources and Requrements :</i><br><br>
+                 <ons-button style="text-transform: none;" onclick="load('DD_view2')" >View</ons-button> 
+               </p>
+              <p><i>Documentation :</i><br><br>
+               <ons-button style="text-transform: none;" onclick="load('DD_doc2');" >View</ons-button>
+             </p>
+            </p>
+              
+        </div>
+      </ons-dialog>
+      <ons-dialog id="content3" cancelable>
+          <div style="text-align: center; padding: 1px;">
+              <p id="des3" style="font-size:15px" >
+                  <H4>Open Fitness</H4> 
+                  <p>
+                      Fitness Application.<br>
+                      Predict illness based on symptoms.<br>
+                      Provide nearby Physician contact.<br>
+                      Provide Diet prescriptions.<br>
+                      Fitness News.<br>
+                      Inbuilt/attachable Testing and measurements(hardware).
+
+                  </p>
+                  <p><i>Related works :</i><br>
+                    <ons-button style="text-transform: none;" onclick="load('med');" modifier="quiet">Mediline</ons-button> 
+                   <ons-button style="text-transform: none;" onclick="load('51');" modifier="quiet">Instruments</ons-button>
+                   <ons-button style="text-transform: none;" onclick="load('symp');" modifier="quiet">Symptom-checker</ons-button>
+                 </p>
+                 <p><i>Resources and Requrements :</i><br><br>
+                   <ons-button style="text-transform: none;" onclick="load('DD_view3')" >View</ons-button> 
+                 </p>
+                <p><i>Documentation :</i><br><br>
+                 <ons-button style="text-transform: none;" onclick="load('DD_doc3');" >View</ons-button>
+               </p>
+              </p>
+               
+          </div>
+        </ons-dialog>
+        <ons-dialog id="content4" cancelable>
+            <div style="text-align: center; padding: 1px;">
+                <p id="des4" style="font-size:15px" >
+                    <H4>Eco Printer</H4> 
+             <p>
+                 A 3D printer which converts recyclable waste plastic into usefull products based on input design.
+
+             </p>
+             <p><i>Related works :</i><br>
+               <ons-button style="text-transform: none;" onclick="load('ren');" modifier="quiet">Renegade</ons-button> 
+                <ons-button style="text-transform: none;" onclick="load('proto');" modifier="quiet">Protocycler</ons-button>
+            </p>
+            <p><i>Resources and Requrements :</i><br><br>
+              <ons-button style="text-transform: none;" onclick="load('DD_view4')" >View</ons-button> 
+            </p>
+           <p><i>Documentation :</i><br><br>
+            <ons-button style="text-transform: none;" onclick="load('DD_doc4');" >View</ons-button>
+          </p>
+                </p>
+                  
+            </div>
+          </ons-dialog>
+          <ons-dialog id="content5" cancelable>
+              <div style="text-align: center; padding: 1px;">
+                  <p id="des5" style="font-size:15px" >
+                      <H4>HomeView</H4> 
+                      <p>
+                          IOT based home awareness system which blends into the active electrical system and capable of understanding the switch states(ON/OFF). 
+                      </p>
+                      <p><i>Related works :</i><br>
+                        <ons-button style="text-transform: none;" onclick="load('get');" modifier="quiet">GetNotion</ons-button> 
+                         <ons-button style="text-transform: none;" onclick="load('smt');" modifier="quiet">Smart Switches</ons-button>
+                     </p>
+                     <p><i>Resources and Requrements :</i><br><br>
+                       <ons-button style="text-transform: none;" onclick="load('DD_view5')" >View</ons-button> 
+                     </p>
+                    <p><i>Documentation :</i><br><br>
+                     <ons-button style="text-transform: none;" onclick="load('DD_doc5');" >View</ons-button>
+                   </p>
+                  </p>
+                    
+              </div>
+            </ons-dialog>  
+            <ons-dialog id="content6" cancelable>
+                <div style="text-align: center; padding: 1px;">
+                    <p id="des6" style="font-size:15px" >
+                        <H4>BotNet</H4> 
+                        <p>
+                            Experimental Swarm-Bot network.
+                            Tracks based bot-network can be used for efficient farming application.
+
+                        </p>
+                        <p><i>Related works :</i><br>
+                          <ons-button style="text-transform: none;" onclick="load('ver');" modifier="quiet">Vertical-Farms</ons-button> 
+                           <ons-button style="text-transform: none;" onclick="load('har');" modifier="quiet">Harward Reasearch</ons-button>
+                       </p>
+                       <p><i>Resources and Requrements :</i><br><br>
+                         <ons-button style="text-transform: none;" onclick="load('DD_view6')" >View</ons-button> 
+                       </p>
+                      <p><i>Documentation :</i><br><br>
+                       <ons-button style="text-transform: none;" onclick="load('DD_doc6');" >View</ons-button>
+                     </p>
+                    </p>
+                      
+                </div>
+              </ons-dialog>  
+              
+               
+</body>
+</html>
