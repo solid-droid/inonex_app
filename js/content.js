@@ -87,7 +87,7 @@ function load(id)
   {
     case "inFORM" : location.href = "https://tangible.media.mit.edu/project/inform/";
     break;
-    case "coca" : location.href = "https://www.youtube.com/watch?v=7iUdFw9WfrU&t=5s";
+    case "coca" : location.href = "https://www.youtube.com/watch?v=7iUdFw9WfrU&t";
     break;
     case "ksrtc" : location.href = "http://117.239.250.178/ksrtclivedemo/";
     break;
@@ -97,9 +97,9 @@ function load(id)
     break;
     case "symp" : location.href = "https://www.mayoclinic.org/symptom-checker/select-symptom/itt-20009075";
     break;
-    case "51" : location.href = "https://www.youtube.com/watch?v=Qf-D1Upn-KU&t=364s";
+    case "51" : location.href = "https://www.youtube.com/watch?v=Qf-D1Upn-KU&t";
     break;
-    case "ren" : location.href = "https://www.youtube.com/watch?v=le37EsburhU&t=5s";
+    case "ren" : location.href = "https://www.youtube.com/watch?v=le37EsburhU&t";
     break;
     case "proto" : location.href = "https://www.youtube.com/watch?v=3-EY8I_XonY";
     break;
